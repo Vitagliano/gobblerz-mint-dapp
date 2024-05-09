@@ -21,8 +21,8 @@ import {WagmiProvider} from 'wagmi';
 
 const {wallets} = getDefaultWallets();
 
-const config = getDefaultConfig({
-    appName: 'Gobblerz',
+export const config = getDefaultConfig({
+    appName: 'Spotlight 404',
     projectId: 'YOUR_PROJECT_ID',
     wallets: [
         ...wallets,
@@ -33,6 +33,7 @@ const config = getDefaultConfig({
     ],
     chains: [
         avalanche,
+        avalancheFuji,
         ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [avalancheFuji] : []),
     ],
     ssr: true,
